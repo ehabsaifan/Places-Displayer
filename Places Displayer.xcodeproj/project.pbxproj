@@ -22,6 +22,7 @@
 		CEF4F05E1F465BE80005E319 /* NullTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0541F465BE80005E319 /* NullTableViewCell.swift */; };
 		CEF4F05F1F465BE80005E319 /* ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0551F465BE80005E319 /* ProgressHud.swift */; };
 		CEF4F0611F465BF30005E319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF4F0601F465BF30005E319 /* Main.storyboard */; };
+		CEF56EFC1F48D3890008F8BF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF56EFB1F48D3890008F8BF /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CEF4F0541F465BE80005E319 /* NullTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullTableViewCell.swift; sourceTree = "<group>"; };
 		CEF4F0551F465BE80005E319 /* ProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHud.swift; sourceTree = "<group>"; };
 		CEF4F0601F465BF30005E319 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CEF56EFB1F48D3890008F8BF /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				CEF4F0511F465BE80005E319 /* FetchManager.swift */,
 				CEF4F0521F465BE80005E319 /* ImageManager.swift */,
 				CEF4F0531F465BE80005E319 /* NetworkManager.swift */,
+				CEF56EFB1F48D3890008F8BF /* LocationManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				CEF4F0571F465BE80005E319 /* PlacesTableViewController.swift in Sources */,
 				CEF4F05F1F465BE80005E319 /* ProgressHud.swift in Sources */,
 				CEF4F05E1F465BE80005E319 /* NullTableViewCell.swift in Sources */,
+				CEF56EFC1F48D3890008F8BF /* LocationManager.swift in Sources */,
 				CEF4F03B1F4645570005E319 /* AppDelegate.swift in Sources */,
 				CEF4F0561F465BE80005E319 /* Constants.swift in Sources */,
 				CEF4F05A1F465BE80005E319 /* extensions.swift in Sources */,

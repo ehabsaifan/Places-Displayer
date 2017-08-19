@@ -17,18 +17,15 @@ class FetchManager: NSObject {
         
     override init(){
         super.init()
-        
-        NotificationCenter.default.addObserver(forName: .UIApplicationDidBecomeActive, object: nil, queue: OperationQueue.main) { (not) -> Void in
-                FetchManager.getPlaces(completion: nil)
-        }
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
-    class func getPlaces(completion: successResponse) {
-        NetworkManager.getPlaces(params: nil) { (json, error) in
+    class func getPlaces(searchText: String, completion: successResponse) {
+        let query = self.shared.getQuery(searchText: searchText)
+        NetworkManager.getPlaces(query: query, params: nil) { (json, error) in
             guard let error = error else{
                 if let jsonList = json?["entries"].arrayValue {
                     self.shared.placesList = jsonList.map({Place(info: $0)})
@@ -45,6 +42,19 @@ class FetchManager: NSObject {
             }
         }
     }// end class func
+    
+    private func getQuery(searchText: String) -> String{
+        var query = "json?query=\(searchText)"
+        if let coordinates = LocationManager.currentManager.currentLocation {
+            let lat = coordinates.latitude
+            let lng = coordinates.longitude
+            let radius = MAX_RADIUS
+            query = query + "&location=\(lat),\(lng)&radius\(radius)"
+            
+        }
+        query = query + "&key=\(API_KEY)"
+        return query
+    }
     
     private func postNotification(notification: CustomNotification) {
         let notificationCenter = NotificationCenter.default
