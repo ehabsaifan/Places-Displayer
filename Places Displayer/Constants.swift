@@ -21,6 +21,11 @@ let HTTPS = "HTTPS"                         // true,
 let LINK = "Link"                           // "https://api.stackexchange.com/",
 let SECTION = "Section"                     // "Development"
 
+let MAX_RADIUS = 50_000
+//TODO: Add to user settings
+let API_KEY = "AIzaSyDw1_GUBq-9qxrgf4Z3v6feyOnlBTT05KU"
+
+
 /*
  ****************************
     Enums

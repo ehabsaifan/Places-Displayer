@@ -14,8 +14,8 @@ typealias JsonResponse = ((_ json : JSON?, _ error : NSError?)->Void)?
 typealias successResponse = ((_ success : Bool, _ error : NSError?)->Void)?
 typealias ImageResponse = ((_ path : String, _ image : UIImage?, _ error : NSError?)->Void)?
 
-let RootPath = "https://support.magcite.com"
-let APIRootPath = RootPath
+let RootPath = "https://maps.googleapis.com"
+let APIRootPath = RootPath + "/maps/api/place/"
 
 class NetworkManager: NSObject, URLSessionDataDelegate {
     
@@ -31,8 +31,8 @@ class NetworkManager: NSObject, URLSessionDataDelegate {
 //MARK: login/signup
 extension NetworkManager{
     
-    class func getPlaces(params: Params, completion : JsonResponse){
-        let path = APIRootPath + "/test.json"
+    class func getPlaces(query: String, params: Params, completion : JsonResponse){
+        let path = APIRootPath + "textsearch/" + query
         self.get(path: path, params: params, completion: { (json, error) -> Void in
             self.completion(json: json, error: error, completion: completion)
         })
@@ -101,7 +101,7 @@ extension NetworkManager{
                 case let (code):
                     if let data = responseObj.data, let utf8Text = String(data: data, encoding: .utf8){
                         let jsonData = JSON.parse(utf8Text)
-                        let message = jsonData["message"].string ?? ""
+                        let message = jsonData["error_message"].string ?? ""
                         let error = NSError.error(message: message, code: code)
                         self.completion(json: jsonData, error: error, completion: completion)
                         print("Error: \(error.localizedDescription)")
@@ -138,7 +138,7 @@ extension NetworkManager{
                 case let (code):
                     if let data = responseObj.data, let utf8Text = String(data: data, encoding: .utf8){
                         let jsonData = JSON.parse(utf8Text)
-                        let message = jsonData["message"].string ?? ""
+                        let message = jsonData["error_message"].string ?? ""
                         let error = NSError.error(message: message, code: code)
                         self.completion(json: jsonData, error: error, completion: completion)
                         print("Error: \(error.localizedDescription)")
