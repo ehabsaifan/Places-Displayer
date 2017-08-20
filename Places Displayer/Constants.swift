@@ -38,5 +38,4 @@ enum CustomNotification {
 
 enum CellType{
     case placeCell
-    case nullCell
 }

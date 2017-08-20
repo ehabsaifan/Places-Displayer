@@ -47,7 +47,7 @@ class PlacesTableViewController: UITableViewController {
     }
     
     @objc private func fetchData(){
-        FetchManager.getPlaces { (suceess, error) in
+        FetchManager.getPlaces(searchText: "") { (suceess, error) in
             self.refreshController.endRefreshing()
         }
     }
@@ -68,7 +68,7 @@ class PlacesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let count = self.places.count
-        let identifier: CellType = (count == 0 ? .nullCell: .placeCell)
+        let identifier: CellType = (count == 0 ? .placeCell: .placeCell)
         
         if count != 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "\(identifier)", for: indexPath) as! PlaceTableViewCell
@@ -76,7 +76,7 @@ class PlacesTableViewController: UITableViewController {
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(identifier)", for: indexPath) as! NullTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(identifier)", for: indexPath) as! UITableViewCell
         
         return cell
     }
