@@ -8,18 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		971D44ABD506C6321E28E5F4 /* Pods_Places_Displayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A32BC2D5A52942A3ACEBFD /* Pods_Places_Displayer.framework */; };
+		CEB0F2D21F48F7BF007B0643 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0F2D11F48F7BF007B0643 /* SearchViewController.swift */; };
 		CEF4F03B1F4645570005E319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F03A1F4645570005E319 /* AppDelegate.swift */; };
 		CEF4F0421F4645570005E319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF4F0411F4645570005E319 /* Assets.xcassets */; };
 		CEF4F0451F4645570005E319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF4F0431F4645570005E319 /* LaunchScreen.storyboard */; };
 		CEF4F0561F465BE80005E319 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F04C1F465BE80005E319 /* Constants.swift */; };
-		CEF4F0571F465BE80005E319 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F04D1F465BE80005E319 /* PlacesTableViewController.swift */; };
 		CEF4F0581F465BE80005E319 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F04E1F465BE80005E319 /* Place.swift */; };
 		CEF4F0591F465BE80005E319 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F04F1F465BE80005E319 /* PlaceTableViewCell.swift */; };
 		CEF4F05A1F465BE80005E319 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0501F465BE80005E319 /* extensions.swift */; };
 		CEF4F05B1F465BE80005E319 /* FetchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0511F465BE80005E319 /* FetchManager.swift */; };
 		CEF4F05C1F465BE80005E319 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0521F465BE80005E319 /* ImageManager.swift */; };
 		CEF4F05D1F465BE80005E319 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0531F465BE80005E319 /* NetworkManager.swift */; };
-		CEF4F05E1F465BE80005E319 /* NullTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0541F465BE80005E319 /* NullTableViewCell.swift */; };
 		CEF4F05F1F465BE80005E319 /* ProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0551F465BE80005E319 /* ProgressHud.swift */; };
 		CEF4F0611F465BF30005E319 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF4F0601F465BF30005E319 /* Main.storyboard */; };
 		CEF56EFC1F48D3890008F8BF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF56EFB1F48D3890008F8BF /* LocationManager.swift */; };
@@ -29,20 +28,19 @@
 		1F210393C7F5D008379B7508 /* Pods-Places Displayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Places Displayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Places Displayer/Pods-Places Displayer.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6E921CC2CFE2ECC032029D /* Pods-Places Displayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Places Displayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Places Displayer/Pods-Places Displayer.release.xcconfig"; sourceTree = "<group>"; };
 		C7A32BC2D5A52942A3ACEBFD /* Pods_Places_Displayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Places_Displayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB0F2D11F48F7BF007B0643 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CEF4F0371F4645570005E319 /* Places Displayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Places Displayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF4F03A1F4645570005E319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF4F0411F4645570005E319 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF4F0441F4645570005E319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF4F0461F4645570005E319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEF4F04C1F465BE80005E319 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CEF4F04D1F465BE80005E319 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		CEF4F04E1F465BE80005E319 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		CEF4F04F1F465BE80005E319 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		CEF4F0501F465BE80005E319 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		CEF4F0511F465BE80005E319 /* FetchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchManager.swift; sourceTree = "<group>"; };
 		CEF4F0521F465BE80005E319 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		CEF4F0531F465BE80005E319 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		CEF4F0541F465BE80005E319 /* NullTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullTableViewCell.swift; sourceTree = "<group>"; };
 		CEF4F0551F465BE80005E319 /* ProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHud.swift; sourceTree = "<group>"; };
 		CEF4F0601F465BF30005E319 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		CEF56EFB1F48D3890008F8BF /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -115,9 +113,8 @@
 		CEF4F0631F465EE90005E319 /* Places Table View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF4F04D1F465BE80005E319 /* PlacesTableViewController.swift */,
+				CEB0F2D11F48F7BF007B0643 /* SearchViewController.swift */,
 				CEF4F04F1F465BE80005E319 /* PlaceTableViewCell.swift */,
-				CEF4F0541F465BE80005E319 /* NullTableViewCell.swift */,
 			);
 			name = "Places Table View";
 			sourceTree = "<group>";
@@ -279,9 +276,8 @@
 				CEF4F05B1F465BE80005E319 /* FetchManager.swift in Sources */,
 				CEF4F0591F465BE80005E319 /* PlaceTableViewCell.swift in Sources */,
 				CEF4F05C1F465BE80005E319 /* ImageManager.swift in Sources */,
-				CEF4F0571F465BE80005E319 /* PlacesTableViewController.swift in Sources */,
 				CEF4F05F1F465BE80005E319 /* ProgressHud.swift in Sources */,
-				CEF4F05E1F465BE80005E319 /* NullTableViewCell.swift in Sources */,
+				CEB0F2D21F48F7BF007B0643 /* SearchViewController.swift in Sources */,
 				CEF56EFC1F48D3890008F8BF /* LocationManager.swift in Sources */,
 				CEF4F03B1F4645570005E319 /* AppDelegate.swift in Sources */,
 				CEF4F0561F465BE80005E319 /* Constants.swift in Sources */,
