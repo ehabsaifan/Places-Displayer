@@ -26,7 +26,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITextField
         self.placesTableView.isHidden = true
     }
     
-    // Gesture Recognizer func called when press outside textfields
    func hideKeyboard(sender: AnyObject) {
         self.searchTextField.resignFirstResponder()
     }
@@ -44,50 +43,33 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITextField
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if let text = textField.text {
             self.placesTableView.isHidden = false
-            self.searchAutocompleteEntriesWithSubstring(substring: text)
+            self.searchPlacesWith(substring: text)
         }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let substring = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-        searchAutocompleteEntriesWithSubstring(substring: substring)
+        searchPlacesWith(substring: substring)
         
-        return true     // not sure about this - could be false
+        return true
     }
     
-    func searchAutocompleteEntriesWithSubstring(substring: String){
-        
-        //self.places.removeAll(keepingCapacity: false)
+    func searchPlacesWith(substring: String){
         
         print(substring)
         
-        FetchManager.getPlaces(searchText: substring, completion: <#T##successResponse##successResponse##(Bool, NSError?) -> Void#>)
-//        if !self.customerIDs.isEmpty {
-//            
-//            for curString in self.customerIDs {
-//                let myString:NSString! = curString as NSString
-//                
-//                let substringRange :NSRange! = myString.rangeOfString(substring, options: .CaseInsensitiveSearch)
-//                
-//                if (substringRange.location  == 0) {
-//                    self.places.append(curString)
-//                    
-//                }// end if
-//            }// end for
-//            self.placesTableView.reloadData()
-//        }// end if
+        FetchManager.getPlaces(searchText: substring, completion: nil)
+
     }
     
     // MARK: - Table view data source
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         let count = self.places.count
         return  count
     }
@@ -107,8 +89,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITextField
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         print(indexPath.row)
-//        let selectedCell = tableView.cellForRow(at: indexPath as IndexPath)!
-//        self.searchTextField.text = selectedCell.textLabel!.text?.uppercased()
         
     }
     
@@ -116,14 +96,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITextField
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //        if(segue.identifier == CheckInDetailSegue){
-        //            if let controller = segue.destinationViewController as? SLCheckInDetailViewController{
-        //                controller.customerID = self.textInput?.uppercaseString
-        //                controller.isCarrierCheckin = self.isCarrierCheckin
-        //            }
-        //        } else if let VC = segue.destinationViewController as? ScannerViewController where segue.identifier == ShowScannerSegue {
-        //            VC.delegate = self
-        //        }// end else
+
     }
 
 }

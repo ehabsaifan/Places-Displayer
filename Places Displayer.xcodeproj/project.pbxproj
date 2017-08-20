@@ -13,7 +13,6 @@
 		CEF4F0421F4645570005E319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF4F0411F4645570005E319 /* Assets.xcassets */; };
 		CEF4F0451F4645570005E319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF4F0431F4645570005E319 /* LaunchScreen.storyboard */; };
 		CEF4F0561F465BE80005E319 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F04C1F465BE80005E319 /* Constants.swift */; };
-		CEF4F0571F465BE80005E319 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F04D1F465BE80005E319 /* PlacesTableViewController.swift */; };
 		CEF4F0581F465BE80005E319 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F04E1F465BE80005E319 /* Place.swift */; };
 		CEF4F0591F465BE80005E319 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F04F1F465BE80005E319 /* PlaceTableViewCell.swift */; };
 		CEF4F05A1F465BE80005E319 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F0501F465BE80005E319 /* extensions.swift */; };
@@ -36,7 +35,6 @@
 		CEF4F0441F4645570005E319 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF4F0461F4645570005E319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEF4F04C1F465BE80005E319 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CEF4F04D1F465BE80005E319 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		CEF4F04E1F465BE80005E319 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		CEF4F04F1F465BE80005E319 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		CEF4F0501F465BE80005E319 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 			children = (
 				CEF4F0601F465BF30005E319 /* Main.storyboard */,
 				CEF4F03A1F4645570005E319 /* AppDelegate.swift */,
-				CEB0F2D11F48F7BF007B0643 /* SearchViewController.swift */,
 				CEF4F0631F465EE90005E319 /* Places Table View */,
 				CEF4F0651F465F050005E319 /* Managers */,
 				CEF4F0641F465EFC0005E319 /* Models */,
@@ -116,7 +113,7 @@
 		CEF4F0631F465EE90005E319 /* Places Table View */ = {
 			isa = PBXGroup;
 			children = (
-				CEF4F04D1F465BE80005E319 /* PlacesTableViewController.swift */,
+				CEB0F2D11F48F7BF007B0643 /* SearchViewController.swift */,
 				CEF4F04F1F465BE80005E319 /* PlaceTableViewCell.swift */,
 			);
 			name = "Places Table View";
@@ -279,7 +276,6 @@
 				CEF4F05B1F465BE80005E319 /* FetchManager.swift in Sources */,
 				CEF4F0591F465BE80005E319 /* PlaceTableViewCell.swift in Sources */,
 				CEF4F05C1F465BE80005E319 /* ImageManager.swift in Sources */,
-				CEF4F0571F465BE80005E319 /* PlacesTableViewController.swift in Sources */,
 				CEF4F05F1F465BE80005E319 /* ProgressHud.swift in Sources */,
 				CEB0F2D21F48F7BF007B0643 /* SearchViewController.swift in Sources */,
 				CEF56EFC1F48D3890008F8BF /* LocationManager.swift in Sources */,
