@@ -11,21 +11,19 @@ import SwiftyJSON
 struct Place: CustomStringConvertible {
     
     var description: String {
-        let text = "Address: \(self.formattedAddress ?? ""),\nPlace id: \(self.placeID ?? ""),\nLocation: \(self.location?.lat ?? 0), \(self.location?.lng ?? 0)"
+        let text = "Name: \(self.name ?? ""),\nPlace id: \(self.placeID ?? "")"
         return text
     }
     
+    var name: String?
     var formattedAddress: String?
     var placeID: String?
     var location: (lat: Double?, lng: Double?)?
     
-    
     init(info: JSON) {
-        self.formattedAddress = info[FORMATTED_ADDRESS].string
+        let structuredFormatting = info[STRUCTURED_FORMATTING].dictionary
+        self.name = structuredFormatting?[MAIN_TEXT]?.string
         self.placeID = info[PLACE_ID].string
-        if let location = (info[GEOMETRY].dictionary)?[LOCATION] {
-            self.location = (lat: location[LAT].double, lng: location[LNG].double)
-        }
     }
     
     

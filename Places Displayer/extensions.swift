@@ -55,4 +55,9 @@ extension UIColor {
     }
 }
 
+extension String {
+    var trim: String {
+       return self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+    }
+}
 
