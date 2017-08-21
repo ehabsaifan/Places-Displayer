@@ -35,7 +35,7 @@ extension UIImageView{
 
 extension UIButton{
     func makeCircularEdges(radius : CGFloat? = 4){
-        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.layer.borderColor = UIColor.red.cgColor
         self.layer.borderWidth = 1.0
         if let radius = radius{
             self.layer.cornerRadius = radius
@@ -58,6 +58,10 @@ extension UIColor {
 extension String {
     var trim: String {
        return self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+    }
+    
+    var removeAllWhiteSpaces: String {
+        return self.components(separatedBy: .whitespaces).joined()
     }
 }
 

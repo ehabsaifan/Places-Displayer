@@ -14,11 +14,23 @@
     ****************************
 */
 
+//Auto Complete endpoint
 let PREDICTIONS = "predictions"
 let NAME = "name"
 let STRUCTURED_FORMATTING = "structured_formatting"
 let MAIN_TEXT = "main_text"
 let PLACE_ID = "place_id"
+//Details endpoint
+let RESULT = "result"
+let FORMATTED_ADDRESS = "formatted_address"
+let INTER_PHONE = "international_phone_number"
+let GEOMETRY = "geometry"
+let LOCATON = "location"
+let OPENING_HOURS = "opening_hours"
+let WEEK_DAY = "weekday_text"
+let RATING = "rating"
+let REVIEWS = "reviews"
+
 
 let MAX_RADIUS = 50_000
 //TODO: Add to user settings

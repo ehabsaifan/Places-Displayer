@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDataSource, UITextFieldDelegate {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var placesTableView: UITableView!
@@ -131,14 +131,20 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITextField
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-                
+        tableView.deselectRow(at: indexPath, animated: false)
+        self.performSegue(withIdentifier: "Place Details", sender: indexPath.row)
     }
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        if segue.identifier == "Place Details" {
+            let controller = segue.destination as! PlaceDetailsTableViewController
+            if let row = sender as? Int {
+                controller.place = self.places[row]
+            }
+        }
     }
 
 }

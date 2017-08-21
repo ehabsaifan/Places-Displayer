@@ -37,6 +37,13 @@ extension NetworkManager{
             self.completion(json: json, error: error, completion: completion)
         })
     }
+    
+    class func getDetails(for place: String, params: Params, completion : JsonResponse){
+        let path = APIRootPath + "details/" + place
+        self.get(path: path, params: params, completion: { (json, error) -> Void in
+            self.completion(json: json, error: error, completion: completion)
+        })
+    }
 }
 
 extension NetworkManager{

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		971D44ABD506C6321E28E5F4 /* Pods_Places_Displayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7A32BC2D5A52942A3ACEBFD /* Pods_Places_Displayer.framework */; };
+		CE2F4B5D1F4A678A001D3018 /* PlaceDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2F4B5C1F4A678A001D3018 /* PlaceDetailsTableViewController.swift */; };
 		CEB0F2D21F48F7BF007B0643 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB0F2D11F48F7BF007B0643 /* SearchViewController.swift */; };
 		CEF4F03B1F4645570005E319 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF4F03A1F4645570005E319 /* AppDelegate.swift */; };
 		CEF4F0421F4645570005E319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF4F0411F4645570005E319 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		1F210393C7F5D008379B7508 /* Pods-Places Displayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Places Displayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Places Displayer/Pods-Places Displayer.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6E921CC2CFE2ECC032029D /* Pods-Places Displayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Places Displayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-Places Displayer/Pods-Places Displayer.release.xcconfig"; sourceTree = "<group>"; };
 		C7A32BC2D5A52942A3ACEBFD /* Pods_Places_Displayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Places_Displayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2F4B5C1F4A678A001D3018 /* PlaceDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailsTableViewController.swift; sourceTree = "<group>"; };
 		CEB0F2D11F48F7BF007B0643 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CEF4F0371F4645570005E319 /* Places Displayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Places Displayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF4F03A1F4645570005E319 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB0F2D11F48F7BF007B0643 /* SearchViewController.swift */,
+				CE2F4B5C1F4A678A001D3018 /* PlaceDetailsTableViewController.swift */,
 				CEF4F04F1F465BE80005E319 /* PlaceTableViewCell.swift */,
 			);
 			name = "Places Table View";
@@ -281,6 +284,7 @@
 				CEF56EFC1F48D3890008F8BF /* LocationManager.swift in Sources */,
 				CEF4F03B1F4645570005E319 /* AppDelegate.swift in Sources */,
 				CEF4F0561F465BE80005E319 /* Constants.swift in Sources */,
+				CE2F4B5D1F4A678A001D3018 /* PlaceDetailsTableViewController.swift in Sources */,
 				CEF4F05A1F465BE80005E319 /* extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
