@@ -11,44 +11,52 @@ import SwiftyJSON
 struct Place: CustomStringConvertible {
     
     var description: String {
-        let text = "API: \(self.api ?? ""),\nAuth: \(self.auth ?? ""),\nDescription: \(self.descreption ?? ""),\nHTTPS: \(self.isHTTPS),\nLink: \(self.link ?? ""),\nSection: \(self.section ?? "")"
+        let text = "Name: \(self.name ?? ""),\nPlace id: \(self.placeID ?? "")"
         return text
     }
     
-    let API = "API"                             // "StackExchange",
-    let AUTH = "Auth"                           // "OAuth",
-    let DESCREPTION = "Description"             // "Q&A forum for developers",
-    let HTTPS = "HTTPS"                         // true,
-    let LINK = "Link"                           // "https://api.stackexchange.com/",
-    let SECTION = "Section"                     // "Development"
-    
-    var api: String?
-    var auth: String?
-    var descreption: String?
-    var https: Bool?
-    var link: String?
-    var section: String?
-    
-    var isHTTPS: String {
-        switch self.https {
-        case (let yes) where yes == true:
-            return "Yes"
-        case (let no) where no == false:
-            return "False"
-        default:
-            return "Unknown"
+    var hours: String {
+        var hoursText = ""
+        for openHours in self.weekDays {
+            hoursText = hoursText + openHours + "\n"
         }
+        return hoursText
     }
     
-    init(info: JSON) {
-        self.api = info[API].string
-        self.auth = info[AUTH].string
-        self.descreption = info[DESCREPTION].string
-        self.https = info[HTTPS].bool
-        self.link = info[LINK].string
-        self.section = info[SECTION].string
-    }
+    var name: String?
+    var formattedAddress: String?
+    var placeID: String?
+    var interPhoneNum: String?
+    var weekDays = ["N/A"]
+    var rating: Double? 
+    var reviews = [JSON]()
+    var location: (lat: Double?, lng: Double?)?
     
+    init(info: JSON, isDetailsEndPoint: Bool = false) {
+        
+        if !isDetailsEndPoint {
+            let structuredFormatting = info[STRUCTURED_FORMATTING].dictionary
+            self.name = structuredFormatting?[MAIN_TEXT]?.string
+        }else {
+            self.name = info[NAME].string
+        }
+        self.formattedAddress = info[FORMATTED_ADDRESS].string
+        self.placeID = info[PLACE_ID].string
+        self.interPhoneNum = info[INTER_PHONE].string
+        self.rating = info[RATING].double
+        
+        if let reviews = info[REVIEWS].array {
+            self.reviews = reviews
+        }
+        
+        let openings = info[OPENING_HOURS].dictionary
+        if let array = openings?[WEEK_DAY]?.arrayObject {
+            self.weekDays = array as! [String]
+        }
+        
+        let location = info[GEOMETRY][LOCATON].dictionary
+        self.location = (lat: location?["lat"]?.double, lng: location?["lat"]?.double)
+    }
     
 }
 
